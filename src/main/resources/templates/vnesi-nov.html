@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" th:href="@{assets/images/fav.jpg}">
+    <link rel="stylesheet" th:href="@{assets/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{assets/css/fontawsom-all.min.css}">
+    <link rel="stylesheet" th:href="@{assets/css/animate.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/style.css}" />
+    <title> Внеси нов извештај </title>
+
+</head>
+<body>
+
+
+    <div class="container mt-5">
+        <h3 align="justify"> </h3>
+        <div class="card" style="width: 55rem; ">
+            <div class="card-header text-center bg-info ">
+                <h5> Внеси Термин </h5>
+            </div>
+            <div class="card-body">
+
+                <form th:action="@{/save-termin}" method="post"> <!--  -->
+                    <div class="form-group">
+                        <label for="dateField"> Датум и време </label>
+                        <input type="datetime-local" placeholder="yyyy-mm-ddThh:mm" class="form-control" id="dateField" aria-describedby="emailHelp" th:name="vreme"> <!--  -->
+                    </div>
+                    <button type="submit" class="btn btn-primary"> Потврди </button> <!-- onclick="convertDate()" -->
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

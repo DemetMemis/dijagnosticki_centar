@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" th:href="@{assets/images/fav.jpg}">
+    <link rel="stylesheet" th:href="@{assets/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{assets/css/fontawsom-all.min.css}">
+    <link rel="stylesheet" th:href="@{assets/css/animate.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/style.css}" />
+    <title> Нов Термин </title>
+</head>
+<body>
+<header id="menu-jk">
+
+    <div id="nav-head" class="header-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-3 no-padding col-sm-12 nav-img">
+                    <img src="assets/images/logo.jpg" alt="">
+                    <a data-toggle="collapse" data-target="#menu" href="#menu" ><i class="fas d-block d-md-none small-menu fa-bars"></i></a>
+                </div>
+                <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#services">За нас</a></li>
+                        <li><a href="#about_us">Оддели</a></li>
+                        <li><a href="#blog">Новости</a></li>
+                        <li><a href="#gallery">Ковид-19</a></li>
+                        <li><a href="#contact_us"> Контакт</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2 d-none d-lg-block appoint">
+                    <button class="btn btn-success"> <a href="/logout">
+                        Log Out
+                    </a></button>
+
+
+                </div>
+                <!--                <div class="col-sm-2 d-none d-lg-block appoint">-->
+                <!--                    <button class="btn btn-success"> <a href="/login">-->
+                <!--                        Најави се-->
+                <!--                    </a></button>-->
+                <!--                </div>-->
+            </div>
+
+        </div>
+    </div>
+</header>
+<form>
+    <div class="container mt-5">
+        <div class="card" style="width: 25rem;">
+            <div class="card-header text-center bg-info ">
+                <h3> Успешно додадовте термин!!!</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="exampleInputEmail1"> Време: </label>
+                    <span th:text="${termin.termin_vreme}"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <h2>About Us</h2>
+                <p>
+                    Smart Eye is a leading provider of information technology, consulting, and business process services. Our dedicated employees offer strategic insights, technological expertise and industry experience.
+                </p>
+                <p>We focus on technologies that promise to reduce costs, streamline processes and speed time-to-market, Backed by our strong quality processes and rich experience managing global... </p>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <h2>Useful Links</h2>
+                <ul class="list-unstyled link-list">
+                    <li><a ui-sref="about" href="#/about">About us</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ui-sref="portfolio" href="#/portfolio">Portfolio</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ui-sref="products" href="#/products">Latest jobs</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ui-sref="gallery" href="#/gallery">Gallery</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ui-sref="contact" href="#/contact">Contact us</a><i class="fa fa-angle-right"></i></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-12 map-img">
+                <h2>Contact Us</h2>
+                <address class="md-margin-bottom-40">
+                    Smart Clinic <br>
+                    Skopje  <br>
+                    Macedonia <br>
+                    Phone: +3897945678 <br>
+                    Email: <a href="mailto:info@anybiz.com" class="">info@smartclinic.com</a><br>
+                    Web: <a href="smart-eye.html" class="">www.smartclinic.com</a>
+                </address>
+
+            </div>
+        </div>
+    </div>
+
+
+</footer>
+<div class="copy">
+    <div class="container">
+        <a href="https://www.smarteyeapps.com/">2022 &copy; All Rights Reserved |</a>
+
+        <span>
+                <a><i class="fab fa-github"></i></a>
+                <a><i class="fab fa-google-plus-g"></i></a>
+                <a><i class="fab fa-pinterest-p"></i></a>
+                <a><i class="fab fa-twitter"></i></a>
+                <a><i class="fab fa-facebook-f"></i></a>
+        </span>
+    </div>
+
+</div>
+</body>
+</html>

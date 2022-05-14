@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form id="filter-form" method="POST" th:action="@{'/rezervacija'}">
+
+    <label for="nameSearch">Name</label>
+    <input id="nameSearch" type="text" name="nameSearch"/>
+    <label for="categoryId">Category</label>
+    <select id="termin_id" name="termin" th:field="*{termin}">
+        <option value="">All</option>
+        <!-- For each category you should have one <option> like below  -->
+        <option th:each="termin: ${termins}" th:value="${termin.termin_id}" th:text="${termin.termin_vreme}"> [termin.termin_vreme]
+<!--            <form th:action="@{'/rezervacija/{termin_id}' (termin_id=${termin.getTermin_id()})}"-->
+<!--                  th:method="POST">-->
+<!--                <button  type="submit" class="btn btn-sm btn-info"> Закажи </button>-->
+<!--            </form>-->
+        </option>
+
+    </select>
+ t
+<!--    //<button id="filter" type="submit">Filter</button>-->
+
+<!--    <form th:action="@{'/rezervacija}'}" th:method="POST">-->
+<!--        <button  type="submit" class="btn btn-sm btn-info"> Закажи </button>-->
+<!--    </form>-->
+    <button  type="submit" class="btn btn-sm btn-info"> Закажи </button>
+</form>
+</body>
+</html>

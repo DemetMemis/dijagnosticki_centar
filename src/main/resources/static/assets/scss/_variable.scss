@@ -1,0 +1,55 @@
+$color-primary : #FFFFFF;
+$text-primary : #444444;
+$text-color:#444444;
+$font-main: 'book-man', sans-serif;
+
+$color-light:rgba(255, 255, 255, 0.8);
+
+$mouse-300: 'mouse-300', Arial, Helvetica, sans-serif;
+$mouse-500: 'mouse-500', Arial, Helvetica, sans-serif;
+$slab: 'slab', Arial, Helvetica, sans-serif;
+
+
+@mixin rgba-primary($opacity){
+	background-color: rgba(26, 170, 85, $opacity);
+}
+
+
+@font-face {
+    font-family: 'mouse-300';
+    src: url("../fonts/PT_Sans-Web-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'mouse-500';
+    src: url("../fonts/PT_Sans-Web-Bold.ttf") format("truetype");
+}
+
+
+
+@mixin shado-1(){
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+@mixin shado-3 {
+    box-shadow: 0 2px 6px 0 rgba(218, 218, 253, 0.65), 0 2px 6px 0 rgba(206, 206, 238, 0.54);
+}
+@mixin shado-4(){
+    box-shadow:  0 2px 3px 0 rgba(218, 218, 253, 0.35), 0 0px 3px 0 rgba(206, 206, 238, 0.35);
+}
+
+@mixin shado-5(){
+    box-shadow: 0 2px 6px 0 rgba(218, 218, 253, 0.65), 0 2px 6px 0 rgba(206, 206, 238, 0.54);
+}
+
+@mixin card-1(){
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  border-radius:2px;
+}
+
+@mixin big-padding(){
+    padding: 80px 50px;
+    @media screen and (max-width: 940px){
+        padding: 50px 10px;
+    }
+    
+}

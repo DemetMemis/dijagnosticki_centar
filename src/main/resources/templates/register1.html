@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" th:href="@{assets/images/favicon.ico}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> Регистрирај се </title>
+    <link rel="shortcut icon" th:href="@{assets/images/fav.jpg}">
+    <link rel="stylesheet" th:href="@{assets/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{assets/css/fontawsom-all.min.css}">
+    <link rel="stylesheet" th:href="@{assets/css/animate.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/style.css}" />
+</head>
+<body>
+<header id="menu-jk">
+
+    <div id="nav-head" class="header-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-3 no-padding col-sm-12 nav-img">
+                    <img src="assets/images/logo.jpg" alt="">
+                    <a data-toggle="collapse" data-target="#menu" href="#menu" ><i class="fas d-block d-md-none small-menu fa-bars"></i></a>
+                </div>
+                <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about_us">About Us</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact_us">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2 d-none d-lg-block appoint">
+                    <button class="btn btn-success"> <a href="/register">
+                        Регистрирај се
+                    </a></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<div class="hide" id="hide-pacient">
+    <form class="form-signin mt-1" method="post" action="/register">
+<!--        <p style="display: none" class="form-check form-check-inline">-->
+<!--            <input class="form-check-input" name="role" type="radio" checked id="ROLE_PACIENT" value="ROLE_PACIENT">-->
+<!--            <label class="form-check-label" for="ROLE_PACIENT">ROLE_PACIENT</label>-->
+<!--        </p>-->
+        <div class="form-check form-check-block">
+            <input class="form-check-input" name="role" type="radio" checked id="ROLE_PACIENT" value="ROLE_PACIENT">
+            <label class="form-check-label" for="ROLE_PACIENT">PACIENT</label>
+            <p>
+                <label for="username" class="sr-only"> Корисничко име </label>
+                <input type="text" id="usernamep" name="username" class="form-control" placeholder="Username" required=""
+                       autofocus="">
+            </p>
+            <p>
+                <label for="password" class="sr-only"> Лозинка </label>
+                <input type="password" id="passwordp" name="password" class="form-control" placeholder="Password"
+                       required="">
+            </p>
+
+            <p>
+                <label for="embg" class="sr-only"> ЕМБГ </label>
+                <input type="text" id="embgp" name="embg" class="form-control" placeholder="embg" required=""
+                       autofocus="">
+            </p>
+            <p>
+                <label for="ime" class="sr-only"> Име </label>
+                <input type="text" id="imep" name="ime" class="form-control" placeholder="Ime" required="" autofocus="">
+            </p>
+            <p>
+                <label for="prezime" class="sr-only"> Презиме </label>
+                <input type="text" id="prezimep" name="prezime" class="form-control" placeholder="Prezime" required=""
+                       autofocus="">
+            </p>
+
+            <!--                <p style="display: none">-->
+            <!--                    <label for="specijalnostId" class="sr-only"> Специјалност </label>-->
+            <!--                    <select id="specijalnostIdp" name="specijalnostId" class="form-control">-->
+            <!--                        &lt;!&ndash;                <option disabled selected value> &#45;&#45; Избери специјалност &#45;&#45; </option>&ndash;&gt;-->
+            <!--                        <option th:if="${specijalnostList.size() > 0}"-->
+            <!--                                th:each="spec : ${specijalnostList}"-->
+            <!--                                th:value="${spec.getSpec_id()}"-->
+            <!--                                th:text="${spec.getNaziv()}">-->
+            <!--                        </option>-->
+            <!--                    </select>-->
+            <!--                </p>-->
+            <!--                <p style="display: none">-->
+            <!--                    <label for="oddelId" class="sr-only"> Оддел </label>-->
+            <!--                    <select id="oddelIdp" name="oddelId" class="form-control">-->
+            <!--                        &lt;!&ndash;                <option disabled selected value> &#45;&#45; Избери оддел &#45;&#45; </option>&ndash;&gt;-->
+            <!--                        <option th:if="${oddelList.size() > 0}"-->
+            <!--                                th:each="oddel : ${oddelList}"-->
+            <!--                                th:value="${oddel.getOddel_id()}"-->
+            <!--                                th:text="${oddel.getNaziv()}">-->
+            <!--                        </option>-->
+            <!--                    </select>-->
+            <!--                </p>-->
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+    </form>
+    <a href="/login" class="btn btn-block btn-light">Already have an account? Login here!</a>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <h2>About Us</h2>
+                <p>
+                    Smart Eye is a leading provider of information technology, consulting, and business process services. Our dedicated employees offer strategic insights, technological expertise and industry experience.
+                </p>
+                <p>We focus on technologies that promise to reduce costs, streamline processes and speed time-to-market, Backed by our strong quality processes and rich experience managing global... </p>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <h2>Useful Links</h2>
+                <ul class="list-unstyled link-list">
+                    <li><a ui-sref="about" href="#/about">About us</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ui-sref="portfolio" href="#/portfolio">Portfolio</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ui-sref="products" href="#/products">Latest jobs</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ui-sref="gallery" href="#/gallery">Gallery</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ui-sref="contact" href="#/contact">Contact us</a><i class="fa fa-angle-right"></i></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-12 map-img">
+                <h2>Contact Us</h2>
+                <address class="md-margin-bottom-40">
+                    Smart Clinic <br>
+                    Skopje  <br>
+                    Macedonia <br>
+                    Phone: +3897945678 <br>
+                    Email: <a href="mailto:info@anybiz.com" class="">info@smartclinic.com</a><br>
+                    Web: <a href="smart-eye.html" class="">www.smartclinic.com</a>
+                </address>
+
+            </div>
+        </div>
+    </div>
+
+
+</footer>
+<div class="copy">
+    <div class="container">
+        <a href="https://www.smarteyeapps.com/">2022 &copy; All Rights Reserved |</a>
+
+        <span>
+                <a><i class="fab fa-github"></i></a>
+                <a><i class="fab fa-google-plus-g"></i></a>
+                <a><i class="fab fa-pinterest-p"></i></a>
+                <a><i class="fab fa-twitter"></i></a>
+                <a><i class="fab fa-facebook-f"></i></a>
+        </span>
+    </div>
+
+</div>
+</body>
+</html>
